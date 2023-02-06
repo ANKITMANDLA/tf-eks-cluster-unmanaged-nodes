@@ -1,0 +1,7 @@
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: provisioning-startup-high-priority
+value: 1000
+globalDefault: false
+description: \"This priority class is used by terraform to assign to services that have pvc volume binding requirements.\"
