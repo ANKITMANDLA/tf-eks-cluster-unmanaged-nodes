@@ -5,29 +5,29 @@ terraform {
 }
 
 resource "aws_security_group" "common-sg" {
-  name        = "Hansen-common-SG"
+  name        = "example-common-SG"
   description = "Cluster Communication with Hansen Azure network and VPN"
   vpc_id      = var.vpc_id
 
   tags = {
-    Name      = "Hansenen-coomon-sg"
+    Name      = "example-common-sg"
     GroupName = var.group_name
   }
 }
 
 resource "aws_security_group" "elb-common-sg" {
-  name        = "Hansen-common-lb-SG"
+  name        = "example-common-lb-SG"
   description = "AWS Loadbalacer inbound/outbound from Hansen Network"
   vpc_id      = var.vpc_id
 
   tags = {
-    Name      = "Hansenen-coomon-sg"
+    Name      = "example-coomon-sg"
     GroupName = var.group_name
   }
 }
 
 
-resource "aws_security_group_rule" "hansen_ingress_rule_1" {
+resource "aws_security_group_rule" "example_ingress_rule_1" {
   description       = "ingress from VPN and Office"
   security_group_id = aws_security_group.common-sg.id
   type              = "ingress"
@@ -37,7 +37,7 @@ resource "aws_security_group_rule" "hansen_ingress_rule_1" {
   protocol          = "tcp"
 }
 
-resource "aws_security_group_rule" "hansen_ingress_rul_2" {
+resource "aws_security_group_rule" "example_ingress_rul_2" {
   description       = "SSH access from VPN and Office"
   security_group_id = aws_security_group.common-sg.id
   type              = "ingress"
@@ -47,7 +47,7 @@ resource "aws_security_group_rule" "hansen_ingress_rul_2" {
   protocol          = "tcp"
 }
 
-resource "aws_security_group_rule" "hansen_ingress_rule_3" {
+resource "aws_security_group_rule" "example_ingress_rule_3" {
   description       = "ingress from Azure"
   security_group_id = aws_security_group.common-sg.id
   type              = "ingress"
