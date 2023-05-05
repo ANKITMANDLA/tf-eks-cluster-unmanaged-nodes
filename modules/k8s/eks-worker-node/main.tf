@@ -7,7 +7,7 @@ terraform {
 locals {
   ami_image_id         = "ami-0c29dd87e87fb4dfd"
   iam_instance_profile = "arn:aws:iam::893130235090:instance-profile/INSTANCEProfileRole"
-  key_name             = "smpbuild-torvm-bld03lx"
+  key_name             = "private-key"
 }
 
 
