@@ -13,7 +13,7 @@ locals {
   eks_worker_node_ami_image_id = "ami-XX"
   eks_worker_node_instance_role = "arn:aws:iam::XX:role/example-eks-node-instance"
   eks_worker_node_ssh_key_name = "vm-ssh-key"
-  cluster_access_role = "arn:aws:iam::893130235090:role/smp-eks-cluster"
+  cluster_access_role = "arn:aws:iam::xx:role/example-eks-cluster"
   kube_config_store_bucket = "example-prov-vm-kube-config"
 }
 
