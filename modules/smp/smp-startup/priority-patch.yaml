@@ -1,4 +1,0 @@
-spec:
-  template:
-    spec:
-      priorityClassName: \"provisioning-startup-high-priority\"
