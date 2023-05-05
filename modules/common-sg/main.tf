@@ -6,7 +6,7 @@ terraform {
 
 resource "aws_security_group" "common-sg" {
   name        = "example-common-SG"
-  description = "Cluster Communication with Hansen Azure network and VPN"
+  description = "Cluster Communication with  Azure network and VPN"
   vpc_id      = var.vpc_id
 
   tags = {
@@ -17,7 +17,7 @@ resource "aws_security_group" "common-sg" {
 
 resource "aws_security_group" "elb-common-sg" {
   name        = "example-common-lb-SG"
-  description = "AWS Loadbalacer inbound/outbound from Hansen Network"
+  description = "AWS Loadbalacer inbound/outbound from  Network"
   vpc_id      = var.vpc_id
 
   tags = {
